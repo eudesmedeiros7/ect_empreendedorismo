@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+body {
+  background-image: url("../assets/img/footer.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff; /* Ajuste a cor do texto para contraste */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #e0f2f1;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: #00796b; /* Cor verde original */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transição suave ao sair do hover */
+}
+
+nav a:hover {
+  color: #ffffff; /* Fica branco ao passar o mouse */
+}
+
+nav a:active,
+nav a:focus,
+nav a:visited {
+  color: #00796b; /* Volta ao verde original após o clique ou foco */
+  outline: none; /* Remove o contorno padrão do navegador */
+  transition: color 0.3s ease; /* Transição suave ao sair do hover */
+}
+.banner {
+  background: linear-gradient(to right, #b2ebf2, #e0f7fa);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  color: #004d40;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.section {
+  padding: 2rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid #00695c;
+}
+
+.section:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.section h2 {
+  color: #00695c;
+  margin-bottom: 0.5rem;
+}
+
+.map-section {
+  display: flex;
+  gap: 1.5rem; /* Espaço entre o mapa e as informações */
+  align-items: flex-start; /* Alinha os itens no topo */
+  padding: 2rem 1rem;
+}
+
+.map-container {
+  flex: 1; /* O mapa ocupa 1 parte do espaço disponível */
+  max-width: 60%; /* Limita a largura máxima do mapa */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o mapa */
+}
+
+.map-info {
+  flex: 1; /* As informações ocupam 1 parte do espaço disponível */
+  max-width: 40%; /* Limita a largura máxima das informações */
+  font-size: 1rem;
+  color: #333;
+}
+
+.map-info h3 {
+  margin-bottom: 1rem;
+  color: #00695c;
+}
+
+.map-info p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.image-placeholder {
+  background-color: #e0e0e0;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+footer {
+  background: #004d40;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.highlight-text {
+  color: #000f00; /* Verde próximo ao título */
+  font-weight: bold; /* Opcional: deixa o texto em negrito */
+}
+.highlight-subtitle {
+  color: #004d40; /* Verde próximo ao título */
+  font-weight: bold; /* Opcional: deixa o texto em negrito */
+}
+
+.social a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #80deea;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+}
+
+main {
+  max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 20px; /* Adiciona espaço interno nas laterais */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fundo branco semi-transparente para contraste */
+  border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o conteúdo */
+}
