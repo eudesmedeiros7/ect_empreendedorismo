@@ -27,7 +27,62 @@ a:active {
   color: inherit;
   text-decoration: none;
 }
+.database-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem; /* Espaço entre o texto e o mapa */
+  margin-top: 1rem;
+}
 
+.database-text {
+  flex: 1; /* O texto ocupa 1 parte do espaço disponível */
+  max-width: 50%; /* Limita a largura máxima do texto */
+  font-size: 1rem;
+  color: #333;
+}
+
+.database-text p {
+  line-height: 1.5;
+}
+
+.iframe-container {
+  flex: 1; /* O mapa ocupa 1 parte do espaço disponível */
+  max-width: 50%; /* Limita a largura máxima do mapa */
+  text-align: center;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  max-width: 450px;
+  height: 350px; /* Altura ajustada */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .database-content {
+    flex-direction: column; /* Alinha o texto e o mapa verticalmente */
+    gap: 1rem; /* Espaço entre o mapa e o texto */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .iframe-container {
+    order: -1; /* Move o iframe para cima do texto */
+    max-width: 100%; /* O mapa ocupa toda a largura disponível */
+    text-align: center; /* Centraliza o mapa */
+  }
+
+  .iframe-container iframe {
+    height: 300px; /* Altura ajustada para um formato mais confortável */
+  }
+
+  .database-text {
+    max-width: 100%; /* O texto ocupa toda a largura disponível */
+    text-align: center; /* Centraliza o texto */
+  }
+}
 .container {
   display: flex;
   justify-content: space-between;
@@ -94,6 +149,39 @@ nav a:visited {
   margin-bottom: 0.5rem;
 }
 
+.section h3 {
+  color: #00695c;
+  margin-bottom: 0.5rem;
+}
+
+.message-box a {
+  color: #00796b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.message-box a:hover {
+  color: #004d40;
+}
+.message-box {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #e0f7fa;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  color: #004d40;
+  font-weight: bold;
+  opacity: 0; /* Inicialmente invisível */
+  transform: translateY(-10px); /* Move para cima inicialmente */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Transição mais lenta */
+  display: none; /* Esconde inicialmente */
+}
+
+.message-box.show {
+  display: block; /* Torna visível */
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Move para a posição original */
+}
 .map-section {
   display: flex;
   gap: 1.5rem; /* Espaço entre o mapa e as informações */
@@ -131,6 +219,28 @@ nav a:visited {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .map-section {
+    flex-direction: column; /* Alinha o mapa e o texto verticalmente */
+    gap: 1rem; /* Espaço entre o mapa e o texto */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .map-container {
+    max-width: 100%; /* O mapa ocupa toda a largura disponível */
+    text-align: center; /* Garante que o mapa fique centralizado */
+  }
+
+  .map-container iframe {
+    height: 250px; /* Altura ajustada para um formato mais quadrado */
+  }
+
+  .map-info {
+    max-width: 100%; /* O texto ocupa toda a largura disponível */
+    text-align: center; /* Centraliza o texto para um visual mais agradável */
+  }
+}
+
 .image-placeholder {
   background-color: #e0e0e0;
   height: 250px;
@@ -139,7 +249,29 @@ nav a:visited {
   justify-content: center;
   font-style: italic;
 }
+.course-topics {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
 
+.course-topics li {
+  margin-bottom: 0.5rem;
+}
+
+.course-topics a {
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.course-topics a:hover {
+  color: #004d40;
+}
 footer {
   background: #004d40;
   color: #fff;
