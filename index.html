@@ -12,154 +12,159 @@
     />
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="container">
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <img src="assets/img/logo.png" alt="Wind Wise Logo" class="logo" />
-        <nav>
-          <ul>
+        <div id="welcome-block" class="welcome-block">Olá, seja bem-vindo</div>
+        <nav class="menu-overlay">
+          <ul class="menu">
             <li><a href="#cursos">Cursos</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="#login">Entrar</a></li>
             <li><a href="#cadastro">Cadastrar</a></li>
           </ul>
+          <p class="menu-footer">
+            © 2025 Wind Wise Company. Todos os direitos reservados.
+          </p>
         </nav>
       </div>
     </header>
+    <div class="site-content">
+      <main>
+        <!-- Banner -->
+        <section class="banner">
+          <h1>Wind Wise Company</h1>
+          <p class="highlight-subtitle">
+            O Vento Rural em sua Energia Residencial
+          </p>
+        </section>
+        <section id="cursos" class="section">
+          <h2>Minicursos</h2>
+          <p class="highlight-text">
+            Capacitação prática com minicursos em manutenção e operação de
+            turbinas eólicas.
+          </p>
+          <h3>O que o curso oferta:</h3>
+          <ul class="course-topics">
+            <li>
+              <a href="#!" onclick="showMessage('introducao', this)">
+                <i class="fa-solid fa-chevron-down"></i> Introdução à Energia
+                Eólica
+              </a>
+              <div class="message-box"></div>
+            </li>
+            <li>
+              <a href="#!" onclick="showMessage('manutencao', this)">
+                <i class="fa-solid fa-chevron-down"></i> Manutenção de Turbinas
+              </a>
+              <div class="message-box"></div>
+            </li>
+            <li>
+              <a href="#!" onclick="showMessage('instalacao', this)">
+                <i class="fa-solid fa-chevron-down"></i> Instalação de Sistemas
+                Eólicos
+              </a>
+              <div class="message-box"></div>
+            </li>
+            <li>
+              <a href="#!" onclick="showMessage('monitoramento', this)">
+                <i class="fa-solid fa-chevron-down"></i> Monitoramento de
+                Energia
+              </a>
+              <div class="message-box"></div>
+            </li>
+          </ul>
+          <div id="message-box" class="message-box"></div>
+        </section>
 
-    <!-- Banner -->
-    <section class="banner">
-      <h1>Wind Wise Company</h1>
-      <p class="highlight-subtitle">O Vento Rural em sua Energia Residencial</p>
-    </section>
-
-    <!-- Seções principais -->
-    <main>
-      <section id="cursos" class="section">
-        <h2>Minicursos</h2>
-        <p class="highlight-text">
-          Capacitação prática com minicursos em manutenção e operação de
-          turbinas eólicas.
-        </p>
-        <h3>O que o curso oferta:</h3>
-        <ul class="course-topics">
-          <li>
-            <a href="#!" onclick="showMessage('introducao', this)">
-              <i class="fa-solid fa-chevron-down"></i> Introdução à Energia
-              Eólica
-            </a>
-            <div class="message-box"></div>
-          </li>
-          <li>
-            <a href="#!" onclick="showMessage('manutencao', this)">
-              <i class="fa-solid fa-chevron-down"></i> Manutenção de Turbinas
-            </a>
-            <div class="message-box"></div>
-          </li>
-          <li>
-            <a href="#!" onclick="showMessage('instalacao', this)">
-              <i class="fa-solid fa-chevron-down"></i> Instalação de Sistemas
-              Eólicos
-            </a>
-            <div class="message-box"></div>
-          </li>
-          <li>
-            <a href="#!" onclick="showMessage('monitoramento', this)">
-              <i class="fa-solid fa-chevron-down"></i> Monitoramento de Energia
-            </a>
-            <div class="message-box"></div>
-          </li>
-        </ul>
-        <div id="message-box" class="message-box"></div>
-      </section>
-
-      <section class="section">
-        <h2>Banco de Dados</h2>
-        <div class="database-content">
-          <div class="database-text">
-            <p>
-              Aqui uma demonstração do potencial energético da nossa cidade.
-              Explore o mapa ao lado para visualizar as áreas com maior
-              aproveitamento do vento no meio rural em Natal-RN.
-            </p>
+        <section class="section">
+          <h2>Banco de Dados</h2>
+          <div class="database-content">
+            <div class="database-text">
+              <p>
+                Explore nosso mapa interativo ao lado para visualizar as áreas com maior
+                aproveitamento do vento no meio rural em Natal-RN.
+              </p>
+            </div>
+            <div class="iframe-container">
+              <iframe
+                src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=default&zoom=11&overlay=wind&product=ecmwf&level=surface&lat=-5.91&lon=-35.198&detailLat=-5.848&detailLon=-35.198&detail=true&message=true"
+                frameborder="0"
+              ></iframe>
+            </div>
           </div>
-          <div class="iframe-container">
+        </section>
+
+        <section class="section">
+          <h2>Rendimento Energético</h2>
+          <div class="image-box">
+            <img
+              src="assets/img/grafico_1.png"
+              alt="Imagem 1 de Rendimento Energético"
+            />
+            <img
+              src="assets/img/grafico_2.png"
+              alt="Imagem 2 de Rendimento Energético"
+            />
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Chatbot Educacional</h2>
+          <p class="highlight-text">
+            Dúvidas? Converse com nosso assistente virtual sobre energia eólica
+            e muito mais.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Quiz</h2>
+          <p class="highlight-text">
+            Teste seus conhecimentos em energia renovável de forma rápida e
+            divertida.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Reciclagem</h2>
+          <p class="highlight-text">
+            Descubra como e onde descartar componentes eólicos de forma
+            responsável.
+          </p>
+        </section>
+
+        <!-- Localização -->
+        <section class="map-section">
+          <div class="map-container">
             <iframe
-              width="450"
-              height="350"
-              src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=default&zoom=11&overlay=wind&product=ecmwf&level=surface&lat=-5.91&lon=-35.198&detailLat=-5.848&detailLon=-35.198&detail=true&message=true"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.08666090862!2d-35.1993953!3d-5.8434097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff82aa3e3b4d%3A0x20c4bb30f68e7bc3!2sEscola%20de%20Ci%C3%AAncias%E2%80%8B%20e%20Tecnologia%20(ECT%2FUFRN)!5e0!3m2!1spt-BR!2sbr!4v1744537627916!5m2!1spt-BR!2sbr"
               frameborder="0"
+              allowfullscreen
             ></iframe>
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Rendimento Energético</h2>
-        <p class="highlight-text">
-          Acompanhe o consumo, geração e armazenamento da sua energia em tempo
-          real.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>Chatbot Educacional</h2>
-        <p class="highlight-text">
-          Dúvidas? Converse com nosso assistente virtual sobre energia eólica e
-          muito mais.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>Quiz</h2>
-        <p class="highlight-text">
-          Teste seus conhecimentos em energia renovável de forma rápida e
-          divertida.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>Reciclagem</h2>
-        <p class="highlight-text">
-          Descubra como e onde descartar componentes eólicos de forma
-          responsável.
-        </p>
-      </section>
-
-      <!-- Localização -->
-      <section class="map-section">
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.08666090862!2d-35.1993953!3d-5.8434097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff82aa3e3b4d%3A0x20c4bb30f68e7bc3!2sEscola%20de%20Ci%C3%AAncias%E2%80%8B%20e%20Tecnologia%20(ECT%2FUFRN)!5e0!3m2!1spt-BR!2sbr!4v1744537627916!5m2!1spt-BR!2sbr"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="map-info">
-          <h3>Localização</h3>
-          <p>
-            Estamos localizados na Escola de Ciências e Tecnologia (ECT/UFRN),
-            em Natal-RN. Venha nos visitar para conhecer mais sobre nossos
-            projetos e iniciativas em energia renovável.
-          </p>
-          <p>
-            <strong>Endereço:</strong> Av. Senador Salgado Filho, 3000 - Lagoa
-            Nova, Natal - RN, 59078-970
-          </p>
-          <p>
-            <strong>Horário de funcionamento:</strong> Segunda a Sexta, das 8h
-            às 18h
-          </p>
-        </div>
-      </section>
-
-      <!-- Imagem ilustrativa
-      <section class="image-placeholder">
-        <img src="assets/img/footer.png" alt="Imagem ilustrativa Wind Wise" />
-      </section> -->
-    </main>
-
+          <div class="map-info">
+            <h3>Localização</h3>
+            <p>
+              Estamos localizados na Escola de Ciências e Tecnologia (ECT/UFRN),
+              em Natal-RN. Venha nos visitar para conhecer mais sobre nossos
+              projetos e iniciativas em energia renovável.
+            </p>
+            <p>
+              <strong>Endereço:</strong> Av. Senador Salgado Filho, 3000 - Lagoa
+              Nova, Natal - RN, 59078-970
+            </p>
+            <p>
+              <strong>Horário de funcionamento:</strong> Segunda a Sexta, das 8h
+              às 18h
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
     <!-- Rodapé -->
     <footer>
       <div class="social">
