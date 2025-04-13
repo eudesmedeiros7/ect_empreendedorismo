@@ -34,3 +34,38 @@ function showMessage(topic, element) {
   // Adiciona ou remove a classe 'show' para exibir/ocultar a mensagem com animação
   messageBox.classList.toggle('show');
 }
+function toggleMenu() {
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const welcomeBlock = document.getElementById('welcome-block');
+  const body = document.body; // Seleciona o corpo do documento
+
+  // Alterna a exibição do menu
+  menuOverlay.classList.toggle('show');
+
+  // Exibe o bloco de boas-vindas apenas quando o menu é ativado
+  if (menuOverlay.classList.contains('show')) {
+    welcomeBlock.style.display = 'block';
+    body.classList.add('menu-open'); // Adiciona a classe para desabilitar a rolagem
+  } else {
+    welcomeBlock.style.display = 'none';
+    body.classList.remove('menu-open'); // Remove a classe para habilitar a rolagem
+  }
+}
+
+// Fecha o menu ao clicar fora dele
+document.addEventListener('click', (event) => {
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const hamburger = document.querySelector('.hamburger');
+  const body = document.body;
+
+  // Verifica se o clique foi fora do menu e do ícone de hambúrguer
+  if (
+    menuOverlay.classList.contains('show') &&
+    !menuOverlay.contains(event.target) &&
+    !hamburger.contains(event.target)
+  ) {
+    menuOverlay.classList.remove('show');
+    document.getElementById('welcome-block').style.display = 'none';
+    body.classList.remove('menu-open'); // Remove a classe para opacidade
+  }
+});
