@@ -4,7 +4,150 @@
   padding: 0;
   box-sizing: border-box;
 }
+header {
+  background-color: #00796b; /* Fundo verde */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 7hv; /* Altura fixa */
+  top: 0; /* Encosta no topo */
+  left: 0; /* Encosta na lateral esquerda */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  padding: 1rem 0; /* Adiciona espaçamento interno */
+}
+header .container {
+  display: flex; /* Define um layout flexível */
+  justify-content: space-between; /* Espaça os itens (menu e logo) nos extremos */
+  align-items: center; /* Centraliza verticalmente os itens */
+  height: 100%; /* Garante que os itens ocupem toda a altura do header */
+}
+.site-content {
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove espaçamentos internos */
+  position: relative; /* Garante que o conteúdo comece no topo */
+  top: 0; /* Encosta o conteúdo no topo */
+}
+/* Estilo para o ícone de hambúrguer */
+.hamburger {
+  display: none; /* Esconde no desktop */
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  color: #80cbc4; /* Cor do ícone */
+}
 
+/* Estilo para a logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Alinha à direita */
+  height: 40px; /* Ajusta o tamanho da logo */
+}
+
+/* Estilo para o menu sobreposto */
+.menu-overlay {
+  display: none; /* Esconde o menu por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%; /* Ocupa metade da tela */
+  height: 100%;
+  background-color: #fff; /* Fundo branco */
+  color: #00796b; /* Cor do texto */
+  z-index: 999; /* Sobrepõe o conteúdo principal */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o menu */
+}
+
+.menu-overlay.show {
+  display: flex; /* Mostra o menu quando ativado */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Organiza os itens verticalmente */
+  justify-content: flex-start; /* Alinha os itens ao topo */
+  height: calc(
+    100vh - 100px
+  ); /* Altura total da tela menos o espaço do botão e do rodapé */
+  padding: 1rem 0; /* Adiciona espaçamento interno no topo e no final */
+  margin: 0; /* Remove margens padrão */
+  text-align: left; /* Alinha o texto à esquerda */
+  gap: 0.5rem; /* Reduz o espaçamento entre os itens */
+}
+
+.menu li {
+  margin: 0; /* Remove margens extras */
+}
+
+.menu a {
+  color: #00796b; /* Cor do texto */
+  text-decoration: none;
+  font-size: 1rem; /* Reduz o tamanho da fonte */
+  font-weight: bold;
+  display: block; /* Garante que o link ocupe toda a largura do item */
+  padding: 0.5rem 1rem; /* Adiciona espaçamento interno */
+  transition: opacity 0.3s ease; /* Transição suave para hover */
+}
+
+.menu a:hover {
+  opacity: 1; /* Remove a opacidade ao passar o mouse */
+}
+.menu-footer {
+  margin-top: auto; /* Empurra o rodapé para o final do menu */
+  font-size: 0.9rem;
+  color: #fff; /* Texto branco */
+  text-align: center; /* Centraliza o texto */
+  background-color: #00796b; /* Fundo verde */
+  padding: 1rem; /* Adiciona espaçamento interno */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Mostra o ícone no celular */
+  }
+
+  .logo {
+    height: 30px; /* Ajusta o tamanho da logo no celular */
+  }
+}
+
+/* Estilo para o bloco de boas-vindas */
+/* Estilo para o bloco de boas-vindas */
+.welcome-block {
+  display: none; /* Esconde o bloco por padrão */
+  position: fixed;
+  top: 0; /* Encosta o bloco no topo do site */
+  left: 0; /* Alinha com o início da barra lateral */
+  width: 50%; /* Limita a largura ao tamanho da barra lateral */
+  background-color: #00796b; /* Fundo verde */
+  color: #fff; /* Texto branco */
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0 0; /* Bordas arredondadas apenas no lado direito */
+  font-size: 1rem;
+  z-index: 1001; /* Garante que fique acima de outros elementos */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o bloco */
+  text-align: center; /* Centraliza o texto dentro do bloco */
+}
+body.menu-open .site-content {
+  opacity: 0.5; /* Deixa apenas o conteúdo principal do site levemente opaco */
+  transition: opacity 0.3s ease; /* Transição suave */
+  pointer-events: none; /* Impede interações com o conteúdo principal */
+}
+body.menu-open {
+  overflow: hidden; /* Impede a rolagem da página */
+}
+/* Garante que o menu permaneça visível e interativo */
+.menu-overlay {
+  pointer-events: auto; /* Permite interações no menu */
+  opacity: 1; /* Garante que o menu não fique opaco */
+  z-index: 999; /* Sobrepõe o conteúdo principal */
+}
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -53,12 +196,12 @@ a:active {
 }
 
 .iframe-container iframe {
-  width: 100%;
-  max-width: 450px;
-  height: 350px; /* Altura ajustada */
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%; /* O iframe ocupará toda a largura do contêiner pai */
+  max-width: 600px; /* Define uma largura máxima para o iframe */
+  height: 350px; /* Altura fixa */
+  border: none; /* Remove bordas */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
 @media (max-width: 768px) {
@@ -88,7 +231,6 @@ a:active {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #e0f2f1;
 }
 
 .logo {
@@ -146,7 +288,7 @@ nav a:visited {
 
 .section h2 {
   color: #00695c;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .section h3 {
@@ -332,4 +474,29 @@ main {
   ); /* Fundo branco semi-transparente para contraste */
   border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o conteúdo */
+}
+@media (max-width: 768px) {
+  header {
+    height: 50px; /* Ajuste a altura para o tamanho desejado */
+    padding: 0; /* Remove espaçamento interno */
+    display: flex; /* Garante alinhamento do conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+}
+.image-box {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 1rem; /* Espaçamento entre as imagens */
+  margin: 0 auto; /* Remove margens externas e centraliza horizontalmente */
+  padding: 0; /* Remove qualquer espaçamento interno */
+  align-items: stretch; /* Garante que o bloco se ajuste à altura das imagens */
+}
+
+.image-box img {
+  width: 45%; /* Cada imagem ocupa 45% da largura da caixa */
+  height: auto; /* Mantém a proporção original da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar as imagens */
+  display: block; /* Remove qualquer espaço extra ao redor da imagem */
 }
