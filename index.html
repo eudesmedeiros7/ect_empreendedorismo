@@ -42,13 +42,57 @@
           Capacitação prática com minicursos em manutenção e operação de
           turbinas eólicas.
         </p>
+        <h3>O que o curso oferta:</h3>
+        <ul class="course-topics">
+          <li>
+            <a href="#!" onclick="showMessage('introducao', this)">
+              <i class="fa-solid fa-chevron-down"></i> Introdução à Energia
+              Eólica
+            </a>
+            <div class="message-box"></div>
+          </li>
+          <li>
+            <a href="#!" onclick="showMessage('manutencao', this)">
+              <i class="fa-solid fa-chevron-down"></i> Manutenção de Turbinas
+            </a>
+            <div class="message-box"></div>
+          </li>
+          <li>
+            <a href="#!" onclick="showMessage('instalacao', this)">
+              <i class="fa-solid fa-chevron-down"></i> Instalação de Sistemas
+              Eólicos
+            </a>
+            <div class="message-box"></div>
+          </li>
+          <li>
+            <a href="#!" onclick="showMessage('monitoramento', this)">
+              <i class="fa-solid fa-chevron-down"></i> Monitoramento de Energia
+            </a>
+            <div class="message-box"></div>
+          </li>
+        </ul>
+        <div id="message-box" class="message-box"></div>
       </section>
 
       <section class="section">
         <h2>Banco de Dados</h2>
-        <p class="highlight-text">
-          Áreas mapeadas para aproveitamento do vento no meio rural em Natal-RN.
-        </p>
+        <div class="database-content">
+          <div class="database-text">
+            <p>
+              Aqui uma demonstração do potencial energético da nossa cidade.
+              Explore o mapa ao lado para visualizar as áreas com maior
+              aproveitamento do vento no meio rural em Natal-RN.
+            </p>
+          </div>
+          <div class="iframe-container">
+            <iframe
+              width="450"
+              height="350"
+              src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=default&zoom=11&overlay=wind&product=ecmwf&level=surface&lat=-5.91&lon=-35.198&detailLat=-5.848&detailLon=-35.198&detail=true&message=true"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
       </section>
 
       <section class="section">
@@ -128,5 +172,6 @@
       </div>
       <p>&copy; 2025 Wind Wise Company. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
