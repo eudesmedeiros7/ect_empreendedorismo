@@ -8,16 +8,12 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: url("../assets/img/footer.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #333;
+  background: url("../assets/img/footer.png") center / cover fixed no-repeat;
+  color: #fff;
   margin: 0;
 }
 
-/* HEADER CORRIGIDO */
+/* HEADER */
 header {
   background-color: #00796b;
   width: 100%;
@@ -67,6 +63,7 @@ header .container {
   padding-top: 80px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
+  pointer-events: auto;
 }
 
 .menu-overlay.show {
@@ -130,85 +127,39 @@ header .container {
 
 /* SITE CONTENT */
 .site-content {
-  margin-top: 70px; /* Altura do header */
+  margin-top: 70px;
   padding: 0;
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Mostra o ícone no celular */
-  }
-
-  .logo {
-    height: 30px; /* Ajusta o tamanho da logo no celular */
-  }
-}
-
-/* Estilo para o bloco de boas-vindas */
-/* Estilo para o bloco de boas-vindas */
-.welcome-block {
-  display: none; /* Esconde o bloco por padrão */
-  position: fixed;
-  top: 0; /* Encosta o bloco no topo do site */
-  left: 0; /* Alinha com o início da barra lateral */
-  width: 50%; /* Limita a largura ao tamanho da barra lateral */
-  background-color: #00796b; /* Fundo verde */
-  color: #fff; /* Texto branco */
-  padding: 0.5rem 1rem;
-  border-radius: 0 0 0 0; /* Bordas arredondadas apenas no lado direito */
-  font-size: 1rem;
-  z-index: 1001; /* Garante que fique acima de outros elementos */
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o bloco */
-  text-align: center; /* Centraliza o texto dentro do bloco */
-}
 body.menu-open .site-content {
-  opacity: 0.5; /* Deixa apenas o conteúdo principal do site levemente opaco */
-  transition: opacity 0.3s ease; /* Transição suave */
-  pointer-events: none; /* Impede interações com o conteúdo principal */
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
+
 body.menu-open {
-  overflow: hidden; /* Impede a rolagem da página */
+  overflow: hidden;
 }
-/* Garante que o menu permaneça visível e interativo */
-.menu-overlay {
-  pointer-events: auto; /* Permite interações no menu */
-  opacity: 1; /* Garante que o menu não fique opaco */
-  z-index: 999; /* Sobrepõe o conteúdo principal */
-}
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-}
-body {
-  background-image: url("../assets/img/footer.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #fff; /* Ajuste a cor do texto para contraste */
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+
 a,
 a:visited,
 a:active {
   color: inherit;
   text-decoration: none;
 }
+
 .database-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem; /* Espaço entre o texto e o mapa */
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .database-text {
-  flex: 1; /* O texto ocupa 1 parte do espaço disponível */
-  max-width: 50%; /* Limita a largura máxima do texto */
+  flex: 1;
+  max-width: 50%;
   font-size: 1rem;
   color: #333;
 }
@@ -218,42 +169,20 @@ a:active {
 }
 
 .iframe-container {
-  flex: 1; /* O mapa ocupa 1 parte do espaço disponível */
-  max-width: 50%; /* Limita a largura máxima do mapa */
+  flex: 1;
+  max-width: 50%;
   text-align: center;
 }
 
 .iframe-container iframe {
-  width: 100%; /* O iframe ocupará toda a largura do contêiner pai */
-  max-width: 600px; /* Define uma largura máxima para o iframe */
-  height: 350px; /* Altura fixa */
-  border: none; /* Remove bordas */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  .database-content {
-    flex-direction: column; /* Alinha o texto e o mapa verticalmente */
-    gap: 1rem; /* Espaço entre o mapa e o texto */
-    align-items: center; /* Centraliza os itens horizontalmente */
-  }
-
-  .iframe-container {
-    order: -1; /* Move o iframe para cima do texto */
-    max-width: 100%; /* O mapa ocupa toda a largura disponível */
-    text-align: center; /* Centraliza o mapa */
-  }
-
-  .iframe-container iframe {
-    height: 300px; /* Altura ajustada para um formato mais confortável */
-  }
-
-  .database-text {
-    max-width: 100%; /* O texto ocupa toda a largura disponível */
-    text-align: center; /* Centraliza o texto */
-  }
-}
 .container {
   display: flex;
   justify-content: space-between;
@@ -261,33 +190,31 @@ a:active {
   padding: 1rem;
 }
 
-.logo {
-  height: 50px;
-}
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
+
 nav a {
   text-decoration: none;
-  color: #00796b; /* Cor verde original */
+  color: #00796b;
   font-weight: bold;
-  transition: color 0.3s ease; /* Transição suave ao sair do hover */
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffffff; /* Fica branco ao passar o mouse */
+  color: #ffffff;
 }
 
 nav a:active,
 nav a:focus,
 nav a:visited {
-  color: #00796b; /* Volta ao verde original após o clique ou foco */
-  outline: none; /* Remove o contorno padrão do navegador */
-  transition: color 0.3s ease; /* Transição suave ao sair do hover */
+  color: #00796b;
+  outline: none;
+  transition: color 0.3s ease;
 }
+
 .banner {
   background: linear-gradient(to right, #b2ebf2, #e0f7fa);
   text-align: center;
@@ -324,6 +251,26 @@ nav a:visited {
   margin-bottom: 0.5rem;
 }
 
+.message-box {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #e0f7fa;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  color: #004d40;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  display: none;
+}
+
+.message-box.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .message-box a {
   color: #00796b;
   font-weight: bold;
@@ -333,48 +280,30 @@ nav a:visited {
 .message-box a:hover {
   color: #004d40;
 }
-.message-box {
-  margin-top: 0.5rem;
-  padding: 1rem;
-  background-color: #e0f7fa;
-  border: 1px solid #00796b;
-  border-radius: 5px;
-  color: #004d40;
-  font-weight: bold;
-  opacity: 0; /* Inicialmente invisível */
-  transform: translateY(-10px); /* Move para cima inicialmente */
-  transition: opacity 0.8s ease, transform 0.8s ease; /* Transição mais lenta */
-  display: none; /* Esconde inicialmente */
-}
 
-.message-box.show {
-  display: block; /* Torna visível */
-  opacity: 1; /* Torna visível */
-  transform: translateY(0); /* Move para a posição original */
-}
 .map-section {
   display: flex;
-  gap: 1.5rem; /* Espaço entre o mapa e as informações */
-  align-items: flex-start; /* Alinha os itens no topo */
+  gap: 1.5rem;
+  align-items: flex-start;
   padding: 2rem 1rem;
 }
 
 .map-container {
-  flex: 1; /* O mapa ocupa 1 parte do espaço disponível */
-  max-width: 60%; /* Limita a largura máxima do mapa */
+  flex: 1;
+  max-width: 60%;
 }
 
 .map-container iframe {
   width: 100%;
   height: 300px;
   border: 0;
-  border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o mapa */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .map-info {
-  flex: 1; /* As informações ocupam 1 parte do espaço disponível */
-  max-width: 40%; /* Limita a largura máxima das informações */
+  flex: 1;
+  max-width: 40%;
   font-size: 1rem;
   color: #333;
 }
@@ -389,28 +318,6 @@ nav a:visited {
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .map-section {
-    flex-direction: column; /* Alinha o mapa e o texto verticalmente */
-    gap: 1rem; /* Espaço entre o mapa e o texto */
-    align-items: center; /* Centraliza os itens horizontalmente */
-  }
-
-  .map-container {
-    max-width: 100%; /* O mapa ocupa toda a largura disponível */
-    text-align: center; /* Garante que o mapa fique centralizado */
-  }
-
-  .map-container iframe {
-    height: 250px; /* Altura ajustada para um formato mais quadrado */
-  }
-
-  .map-info {
-    max-width: 100%; /* O texto ocupa toda a largura disponível */
-    text-align: center; /* Centraliza o texto para um visual mais agradável */
-  }
-}
-
 .image-placeholder {
   background-color: #e0e0e0;
   height: 250px;
@@ -419,6 +326,7 @@ nav a:visited {
   justify-content: center;
   font-style: italic;
 }
+
 .course-topics {
   list-style: none;
   padding: 0;
@@ -442,6 +350,7 @@ nav a:visited {
 .course-topics a:hover {
   color: #004d40;
 }
+
 footer {
   background: #004d40;
   color: #fff;
@@ -450,13 +359,14 @@ footer {
 }
 
 .highlight-text {
-  color: #000f00; /* Verde próximo ao título */
-  font-weight: bold; /* Opcional: deixa o texto em negrito */
-  margin-bottom: 1rem; /* Espaço abaixo do texto */
+  color: #000f00;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
+
 .highlight-subtitle {
-  color: #004d40; /* Verde próximo ao título */
-  font-weight: bold; /* Opcional: deixa o texto em negrito */
+  color: #004d40;
+  font-weight: bold;
 }
 
 .social a {
@@ -470,8 +380,82 @@ footer {
   color: #80deea;
 }
 
-/* Responsividade */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0;
+  align-items: stretch;
+}
+
+.image-box img {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.video-container {
+  max-width: 600px;
+  max-height: 340px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  header {
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .database-content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .iframe-container {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .iframe-container iframe {
+    height: 300px;
+  }
+
+  .database-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
   .container {
     flex-direction: column;
   }
@@ -489,55 +473,23 @@ footer {
   .banner p {
     font-size: 1rem;
   }
-}
 
-main {
-  max-width: 1200px; /* Define uma largura máxima para o conteúdo */
-  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
-  padding: 20px; /* Adiciona espaço interno nas laterais */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Fundo branco semi-transparente para contraste */
-  border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o conteúdo */
-}
-@media (max-width: 768px) {
-  header {
-    height: 50px; /* Ajuste a altura para o tamanho desejado */
-    padding: 0; /* Remove espaçamento interno */
-    display: flex; /* Garante alinhamento do conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+  .map-section {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
-}
-.image-box {
-  display: flex;
-  justify-content: center; /* Centraliza as imagens horizontalmente */
-  gap: 1rem; /* Espaçamento entre as imagens */
-  margin: 0 auto; /* Remove margens externas e centraliza horizontalmente */
-  padding: 0; /* Remove qualquer espaçamento interno */
-  align-items: stretch; /* Garante que o bloco se ajuste à altura das imagens */
-}
 
-.image-box img {
-  width: 45%; /* Cada imagem ocupa 45% da largura da caixa */
-  height: auto; /* Mantém a proporção original da imagem */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar as imagens */
-  display: block; /* Remove qualquer espaço extra ao redor da imagem */
-}
-.video-container {
-  max-width: 600px; /* Largura máxima (tamanho da área vermelha) */
-  max-height: 340px; /* Altura máxima */
-  width: 100%; /* Reduz em telas menores */
-  aspect-ratio: 16/9; /* Mantém a proporção 16:9 */
-  margin: 0 auto; /* Centraliza */
-}
+  .map-container {
+    max-width: 100%;
+  }
 
-.video-container iframe {
-  width: 100%;
-  height: 100%;
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .map-info {
+    max-width: 100%;
+    text-align: center;
+  }
 }
