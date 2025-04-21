@@ -1,0 +1,102 @@
+/* planos.css */
+.planos-main {
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.planos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.plano-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 77, 64, 0.1);
+  transition: transform 0.3s ease;
+  margin: 1rem;
+}
+
+.plano-header {
+  padding: 2rem;
+  border-radius: 15px 15px 0 0;
+}
+
+.plano-header h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.plano-header p {
+  color: #e0f2f1 !important;
+  margin: 0.5rem 0 0;
+}
+
+.plano-conteudo {
+  padding: 2rem;
+  color: #004d40;
+}
+.plano-lista .fa-check {
+  color: #00796b; /* Verde original */
+}
+
+.plano-lista {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.plano-lista .fa-x {
+  color: #d32f2f; /* Vermelho intenso */
+  margin-right: 0.3rem;
+}
+.plano-lista li {
+  justify-content: flex-start; /* Alinha ícones e texto à esquerda */
+  padding-left: 1rem;
+}
+
+.plano-preco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.plano-btn {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 180px; /* Largura fixa */
+  margin: 0 auto; /* Centraliza */
+  display: block; /* Para ocupar toda a linha */
+  font-size: 1.1rem;
+}
+.plano-btn:hover {
+  background-color: #004d40;
+  transform: scale(1.05); /* Efeito adicional no hover */
+}
+
+@media (max-width: 768px) {
+  .planos-container {
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+  }
+
+  .plano-card {
+    margin: 1rem 0;
+  }
+}
