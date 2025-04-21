@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planos - Wind Wise</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/planos.css" />
+    <link rel="icon" href="assets/img/logo_white.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <img src="assets/img/logo.png" alt="Wind Wise Logo" class="logo" />
+        <nav class="menu-overlay">
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#cursos">Cursos</a></li>
+            <li><a href="planos.html">Planos</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <!-- Demais itens do menu -->
+          </ul>
+          <p class="menu-footer">
+            © 2025 Wind Wise Company. Todos os direitos reservados.
+          </p>
+        </nav>
+      </div>
+    </header>
+
+    <main class="planos-main">
+      <section class="section">
+        <h2>Nossos Planos</h2>
+        <div class="planos-container">
+          <!-- Plano Básico -->
+          <div class="plano-card">
+            <div class="plano-header" style="background-color: #00695c">
+              <h3>Básico</h3>
+              <p>Ideal para iniciantes em energia</p>
+            </div>
+            <div class="plano-conteudo">
+              <ul class="plano-lista">
+                <li>
+                  <i class="fa-solid fa-check"></i>1 minicurso introdutório
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>Material didático básico
+                </li>
+                <li><i class="fa-solid fa-x"></i>Suporte técnico</li>
+                <li><i class="fa-solid fa-x"></i>Certificado</li>
+                <li><i class="fa-solid fa-x"></i>Reciclagem de componentes</li>
+              </ul>
+              <div class="plano-preco">
+                <span>R$ 29/mês</span>
+                <button class="plano-btn">Assinar Plano</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano Profissional -->
+          <div class="plano-card">
+            <div class="plano-header" style="background-color: #00796b">
+              <h3>Profissional</h3>
+              <p>Para técnicos e pequenos projetos</p>
+            </div>
+            <div class="plano-conteudo">
+              <ul class="plano-lista">
+                <li><i class="fa-solid fa-check"></i>4 minicursos completos</li>
+                <li>
+                  <i class="fa-solid fa-check"></i>Kit de ferramentas digitais
+                </li>
+                <li><i class="fa-solid fa-check"></i>Suporte por e-mail</li>
+                <li><i class="fa-solid fa-check"></i>Certificado digital</li>
+                <li><i class="fa-solid fa-check"></i>Guia de reciclagem</li>
+              </ul>
+              <div class="plano-preco">
+                <span>R$ 79/mês</span>
+                <button class="plano-btn">Assinar Plano</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano Premium -->
+          <div class="plano-card">
+            <div class="plano-header" style="background-color: #004d40">
+              <h3>Premium</h3>
+              <p>Soluções completas para empresas</p>
+            </div>
+            <div class="plano-conteudo">
+              <ul class="plano-lista">
+                <li><i class="fa-solid fa-check"></i>Todos os minicursos</li>
+                <li>
+                  <i class="fa-solid fa-check"></i>Simulador eólico premium
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>Suporte prioritário 24h
+                </li>
+                <li><i class="fa-solid fa-check"></i>Certificado físico</li>
+                <li><i class="fa-solid fa-check"></i>Reciclagem com coleta</li>
+              </ul>
+              <div class="plano-preco">
+                <span>R$ 199/mês</span>
+                <button class="plano-btn">Assinar Plano</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/windwisecompany/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/windwisecompany/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="mailto:windwisecompany@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Wind Wise Company. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
